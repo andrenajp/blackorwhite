@@ -1,6 +1,9 @@
 <html>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="script.js"></script>
+
 	<body>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 		<div ng-app="">
@@ -17,9 +20,13 @@
 			<div class="ou"></div>
 
 			<section id="edit">
-				<p>noir : <input type="text" ng-model="noir" placeholder="noir"></p>
-				<p >blanc : <input type="text" ng-model="blanc" placeholder="blanc"></p>
+				<div>
+					<p>noir : <input type="text" ng-model="noir" placeholder="noir"></p>
+					<p >blanc : <input type="text" ng-model="blanc" placeholder="blanc"></p>
+					<button onclick="toImage()">ok</button>
+				</div>
 				<div id="res"></div>
+				<div id="download"></div>
 			</section>
 
 		</div>
