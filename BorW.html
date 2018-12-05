@@ -1,64 +1,27 @@
-<html ng-app>
-<style>
-	.blanc{
-		 margin: 0px 0 0 0;
-		width: 100%;
-		height: 450px;
-		color: black;
-		background-color: white;
-		text-align: center;
-		font-size: 100px;
-	}
-	.noir{
-		margin: 0 0 0 0;
-		width: 100%;
-		height: 450px;
-		color: white;
-		font-size: 100px;
-		background-color: black;
-		text-align: center;
-	}
-	.ou{
-		margin: 0 0 0 0;
-		position: fixed;
-		top: 42%;
-		left: 48%;
-		font-size: 100px;
-		color:white;
-		border: solid 1px red;
-		vertical-align: middle;
-		background: linear-gradient(to top, #fff 50%, #000 50%);
-		height: 100px;
-		width: 100px;
-		text-align: center;
-		border-radius: 50%;
-	}
+<html>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+	<body>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<div ng-app="">
+			<section id="run">
+				<div class="blanc">
+					<p>{{blanc}}</p>
+				</div>
 
-	p{	
-		margin: 0px 0 0 0;
-		position: relative;
-		top: 50%;
-		float: center;
-		
-	}
-</style>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
-<body>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<div ng-app="">
-	<div class="blanc">
-	<p>{{blanc}}</p>
-</div>
+				<div class='noir'>
+					<p>{{noir}}</p>
+				</div>
+			</section>
 
-<div class='noir'>
-	<p>{{noir}}</p>
-</div>
+			<div class="ou"></div>
 
-<div class="ou"></div>
-<p>Input something in the input box:</p>
-<p>noir : <input type="text" ng-model="noir" placeholder="Enter name here"></p>
-<p>blanc : <input type="text" ng-model="blanc" placeholder="Enter name here"></p>
-</div>
-</body>
+			<section id="edit">
+				<p>noir : <input type="text" ng-model="noir" placeholder="noir"></p>
+				<p>blanc : <input type="text" ng-model="blanc" placeholder="blanc"></p>
+			</section>
+
+		</div>
+	</body>
 
 </html>
